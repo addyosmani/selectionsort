@@ -1,6 +1,6 @@
 {
   "name": "selectionsort",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Selection sort with O(n^2) time complexity",
   "homepage": "http://addyosmani.com",
   "author": {
