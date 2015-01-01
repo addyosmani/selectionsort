@@ -1,0 +1,36 @@
+{
+  "name": "selectionsort",
+  "version": "0.0.0",
+  "description": "Selection sort with O(n^2) time complexity",
+  "homepage": "http://addyosmani.com",
+  "author": {
+    "name": "Addy Osmani",
+    "email": "addyosmani@gmail.com",
+    "url": "addyosmani.com"
+  },
+  "repository": "addyosmani/selectionsort",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "selectionsort",
+    "selection sort",
+    "sort",
+    "comparison"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^1.0.0",
+    "time-grunt": "^1.0.0",
+    "grunt-mocha-cli": "^1.11.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  }
+}
