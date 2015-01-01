@@ -11,8 +11,7 @@ function makeRandomArray() {
     var result = [];
 
     for (var i = size; i > 0; i -= 1) {
-        result.push(parseFloat((Math.random() *
-            multiplier).toFixed(precision)));
+        result.push(parseFloat((Math.random() * multiplier).toFixed(precision)));
     }
     return result;
 }
@@ -26,13 +25,13 @@ describe('selectionsort node module', function() {
     it('should work with sorted arrays', function() {
         assert(selectionsort([1, 2, 3, 4]), [1, 2, 3, 4]);
         assert(selectionsort([5, 1, 12, -5, 16, 2, 12, 14]), [-5, 1, 2, 5, 12, 12, 14, 16]);
-        assert(selectionsort([6,4,9,3,1,7]), [1,3,4,6,7,9]);
+        assert(selectionsort([6, 4, 9, 3, 1, 7]), [1, 3, 4, 6, 7, 9]);
     });
 
     it('should work with random non-sorted arrays', function() {
 
         var array = makeRandomArray({
-                precision: 0
+            precision: 0
         });
         selectionsort(array);
         for (var i = 0; i < array.length - 1; i += 1) {
