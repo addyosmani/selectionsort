@@ -10,27 +10,27 @@ function compare(a, b) {
  * @param  {Function} compareFunction Compare function
  * @return {Array}            sorted array
  */
-module.exports = function(array, compareFunction) {
+module.exports = function (array, compareFunction) {
 
-  var min   = 0;
+  var min = 0;
   var index = 0;
-  var temp  = 0;
+  var temp = 0;
 
   compareFunction = compareFunction || compare;
 
   for (var i = 0; i < array.length; i += 1) {
-  	index = i;
-  	min = array[i];
+    index = i;
+    min = array[i];
 
-  	for (var j = i + 1; j < array.length; j += 1) {
-  		if (compareFunction(min, array[j]) > 0) {
-  			min = array[j];
-  			index = j;
-  		}
-  		temp = array[i];
-  		array[i] = min;
-  		array[index] = temp;
-  	}
+    for (var j = i + 1; j < array.length; j += 1) {
+      if (compareFunction(min, array[j]) > 0) {
+        min = array[j];
+        index = j;
+      }
+      temp = array[i];
+      array[i] = min;
+      array[index] = temp;
+    }
   }
 
   return array;
