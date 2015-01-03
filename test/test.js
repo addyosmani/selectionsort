@@ -19,13 +19,13 @@ function makeRandomArray() {
 describe('selectionsort node module', function () {
 
   it('should work with empty arrays', function () {
-    assert(selectionsort([]), []);
+    assert.deepEqual(selectionsort([]), []);
   });
 
   it('should work with sorted arrays', function () {
-    assert(selectionsort([1, 2, 3, 4]), [1, 2, 3, 4]);
-    assert(selectionsort([5, 1, 12, -5, 16, 2, 12, 14]), [-5, 1, 2, 5, 12, 12, 14, 16]);
-    assert(selectionsort([6, 4, 9, 3, 1, 7]), [1, 3, 4, 6, 7, 9]);
+    assert.deepEqual(selectionsort([1, 2, 3, 4]), [1, 2, 3, 4]);
+    assert.deepEqual(selectionsort([5, 1, 12, -5, 16, 2, 12, 14]), [-5, 1, 2, 5, 12, 12, 14, 16]);
+    assert.deepEqual(selectionsort([6, 4, 9, 3, 1, 7]), [1, 3, 4, 6, 7, 9]);
   });
 
   it('should work with random non-sorted arrays', function () {

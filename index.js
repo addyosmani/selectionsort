@@ -27,10 +27,11 @@ module.exports = function (array, compareFunction) {
         min = array[j];
         index = j;
       }
-      temp = array[i];
-      array[i] = min;
-      array[index] = temp;
     }
+
+    temp = array[i];
+    array[i] = min;
+    array[index] = temp;
   }
 
   return array;
