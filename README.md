@@ -20,6 +20,9 @@ selectionsort([6,4,9,3,1,7]);
 
 selectionsort([5, 1, 12, -5, 16, 2, 12, 14]);
 // => [-5, 1, 2, 5, 12, 12, 14, 16]
+
+selectionsort([6,4,9,3,1,7], function(a, b) { return b - a; }); 
+// => [9,7,6,4,3,1]
 ```
 
 
