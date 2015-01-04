@@ -23,6 +23,11 @@ selectionsort([5, 1, 12, -5, 16, 2, 12, 14]);
 
 selectionsort([6,4,9,3,1,7], function(a, b) { return b - a; }); 
 // => [9,7,6,4,3,1]
+
+var unsorted = [3,1,2];
+var sorted = selectionsort(unsorted);
+// unsorted => [3,1,2]
+// sorted => [1,2,3]
 ```
 
 

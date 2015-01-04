@@ -33,9 +33,18 @@ describe('selectionsort node module', function () {
     var array = makeRandomArray({
       precision: 0
     });
-    selectionsort(array);
-    for (var i = 0; i < array.length - 1; i += 1) {
-      assert((array[i] <= array[i + 1]) === true);
+    var sorted = selectionsort(array);
+
+    for (var i = 0; i < sorted.length - 1; i += 1) {
+      assert((sorted[i] <= sorted[i + 1]) === true);
     }
+  });
+
+  it('should not change the unsorted array', function () {
+
+    var unsorted  = [4, 2, 1, 3];
+
+    assert.deepEqual(selectionsort(unsorted), [1, 2, 3, 4]);
+    assert.deepEqual(unsorted, [4, 2, 1, 3]);
   });
 });

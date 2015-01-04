@@ -12,27 +12,28 @@ function compare(a, b) {
  */
 module.exports = function (array, compareFunction) {
 
+  var sorted = Array.prototype.slice.call(array);
   var min = 0;
   var index = 0;
   var temp = 0;
 
   compareFunction = compareFunction || compare;
 
-  for (var i = 0; i < array.length; i += 1) {
+  for (var i = 0; i < sorted.length; i += 1) {
     index = i;
-    min = array[i];
+    min = sorted[i];
 
-    for (var j = i + 1; j < array.length; j += 1) {
-      if (compareFunction(min, array[j]) > 0) {
-        min = array[j];
+    for (var j = i + 1; j < sorted.length; j += 1) {
+      if (compareFunction(min, sorted[j]) > 0) {
+        min = sorted[j];
         index = j;
       }
     }
 
-    temp = array[i];
-    array[i] = min;
-    array[index] = temp;
+    temp = sorted[i];
+    sorted[i] = min;
+    sorted[index] = temp;
   }
 
-  return array;
+  return sorted;
 };
